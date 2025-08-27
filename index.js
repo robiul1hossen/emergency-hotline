@@ -25,8 +25,18 @@ addEventListenerToIncreaseHeart("heart8");
 addEventListenerToIncreaseHeart("heart9");
 
 document.getElementById("call1").addEventListener("click", function () {
-  const serviceName = getInnerText("service-name1");
-  const serviceNumber = getInnerText("service-number1");
-  const message = `You are Calling ${serviceName} at ${serviceNumber}`;
-  alert(message);
+  //* decrease coin
+  let coin = Number(getInnerText("coin"));
+  console.log(coin);
+  if (coin < 20) {
+    return alert("not enough coin to make a call");
+  } else {
+    //* show alert message
+    const serviceName = getInnerText("service-name1");
+    const serviceNumber = getInnerText("service-number1");
+    const message = `You are Calling ${serviceName} at ${serviceNumber}`;
+    alert(message);
+    coin = coin - 20;
+    document.getElementById("coin").innerText = coin;
+  }
 });
