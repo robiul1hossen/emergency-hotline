@@ -33,7 +33,7 @@
         <div
           class="flex flex-col sm:flex-row gap-4 md:gap-10 md:items-center mt-2 md:mt-0 ms-4 md:ms-0">
           <div class="text-lg font-medium flex gap-2 items-center">
-            <span>0</span>
+            <span cla id="heart-count">0</span>
             <i class="fa-regular fa-heart"></i>
           </div>
           <div class="text-lg font-medium flex gap-2 items-center">
@@ -67,7 +67,7 @@
       <section class="max-w-6xl mx-auto">
         <div class="grid grid-cols-12 gap-[30px]">
           <div
-            class="grid grid-cols-1 col-span-9 md:grid-cols-2 lg:grid-cols-3 gap-4 md:mt-12">
+            class="grid grid-cols-1 col-span-12 md:col-span-9 md:grid-cols-2 lg:grid-cols-3 gap-4 md:mt-12">
             <!-- card 1 -->
             <div class="shadow-xl p-8">
               <div class="flex justify-between items-center">
@@ -75,7 +75,7 @@
                   class="w-10 bg-[#FFE3E2] p-1 rounded-lg"
                   src="./assets/emergency.png"
                   alt="" />
-                <button class="cursor-pointer text-xl">
+                <button class="cursor-pointer text-xl" id="heart1">
                   <i class="fa-regular fa-heart"></i>
                 </button>
               </div>
@@ -108,7 +108,7 @@
                   class="w-10 bg-[#FFE3E2] p-1 rounded-lg"
                   src="./assets/police.png"
                   alt="" />
-                <button class="cursor-pointer text-xl">
+                <button class="cursor-pointer text-xl" id="heart2">
                   <i class="fa-regular fa-heart"></i>
                 </button>
               </div>
@@ -139,7 +139,7 @@
                   class="w-10 bg-[#FFE3E2] p-1 rounded-lg"
                   src="./assets/fire-service.png"
                   alt="" />
-                <button class="cursor-pointer text-xl">
+                <button class="cursor-pointer text-xl" id="heart3">
                   <i class="fa-regular fa-heart"></i>
                 </button>
               </div>
@@ -170,7 +170,7 @@
                   class="w-10 bg-[#FFE3E2] p-1 rounded-lg"
                   src="./assets/ambulance.png"
                   alt="" />
-                <button class="cursor-pointer text-xl">
+                <button class="cursor-pointer text-xl" id="heart4">
                   <i class="fa-regular fa-heart"></i>
                 </button>
               </div>
@@ -201,7 +201,7 @@
                   class="w-10 bg-[#FFE3E2] p-1 rounded-lg"
                   src="./assets/emergency.png"
                   alt="" />
-                <button class="cursor-pointer text-xl">
+                <button class="cursor-pointer text-xl" id="heart5">
                   <i class="fa-regular fa-heart"></i>
                 </button>
               </div>
@@ -234,7 +234,7 @@
                   class="w-10 bg-[#FFE3E2] p-1 rounded-lg"
                   src="./assets/emergency.png"
                   alt="" />
-                <button class="cursor-pointer text-xl">
+                <button class="cursor-pointer text-xl" id="heart6">
                   <i class="fa-regular fa-heart"></i>
                 </button>
               </div>
@@ -267,7 +267,7 @@
                   class="w-10 bg-[#FFE3E2] p-1 rounded-lg"
                   src="./assets/emergency.png"
                   alt="" />
-                <button class="cursor-pointer text-xl">
+                <button class="cursor-pointer text-xl" id="heart7">
                   <i class="fa-regular fa-heart"></i>
                 </button>
               </div>
@@ -300,7 +300,7 @@
                   class="w-10 bg-[#FFE3E2] p-1 rounded-lg"
                   src="./assets/brac.png"
                   alt="" />
-                <button class="cursor-pointer text-xl">
+                <button class="cursor-pointer text-xl" id="heart8">
                   <i class="fa-regular fa-heart"></i>
                 </button>
               </div>
@@ -331,7 +331,7 @@
                   class="w-10 bg-[#FFE3E2] p-1 rounded-lg"
                   src="./assets/Bangladesh-Railway.png"
                   alt="" />
-                <button class="cursor-pointer text-xl">
+                <button class="cursor-pointer text-xl" id="heart9">
                   <i class="fa-regular fa-heart"></i>
                 </button>
               </div>
@@ -358,7 +358,7 @@
               </div>
             </div>
           </div>
-          <div class="col-span-3 mt-12">
+          <div class="col-span-12 md:col-span-3 mt-12">
             <!-- History title -->
             <div class="flex justify-between items-center">
               <div class="flex gap-2 items-center">
@@ -385,5 +385,8 @@
         </div>
       </section>
     </main>
+
+    <!-- script file -->
+    <script src="./index.js"></script>
   </body>
 </html>
