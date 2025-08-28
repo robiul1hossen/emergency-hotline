@@ -24,21 +24,22 @@ addEventListenerToIncreaseHeart("heart7");
 addEventListenerToIncreaseHeart("heart8");
 addEventListenerToIncreaseHeart("heart9");
 
-document.getElementById("call1").addEventListener("click", function () {
-  let coin = Number(getInnerText("coin"));
-  console.log(coin);
-  if (coin < 20) {
-    return alert("not enough coin to make a call");
-  } else {
-    const serviceName = getInnerText("service-name1");
-    const serviceNumber = getInnerText("service-number1");
-    const message = `You are Calling ${serviceName} at ${serviceNumber}`;
-    alert(message);
-    let date = new Date();
-    date = date.toLocaleString();
-    date = date.split(",")[1];
+function callSectionFunctionality(btnId, serviceId, numberId) {
+  document.getElementById(btnId).addEventListener("click", function () {
+    let coin = Number(getInnerText("coin"));
+    console.log(coin);
+    if (coin < 20) {
+      return alert("not enough coin to make a call");
+    } else {
+      const serviceName = getInnerText(serviceId);
+      const serviceNumber = getInnerText(numberId);
+      const message = `You are Calling ${serviceName} at ${serviceNumber}`;
+      alert(message);
+      let date = new Date();
+      date = date.toLocaleString();
+      date = date.split(",")[1];
 
-    const cardBodyHtml = ` <div
+      const cardBodyHtml = ` <div
                 class="flex justify-between items-center gap-2 bg-[#F2F2F2] p-4 rounded-lg mt-4">
                 <div>
                   <h2 class="text-[13px] font-semibold mb-1">${serviceName}</h2>
@@ -46,9 +47,20 @@ document.getElementById("call1").addEventListener("click", function () {
                 </div>
                 <div class="text-[11px]">${date}</div>
               </div>`;
-    document.getElementById("card-body").innerHTML += cardBodyHtml;
+      document.getElementById("card-body").innerHTML += cardBodyHtml;
 
-    coin = coin - 20;
-    document.getElementById("coin").innerText = coin;
-  }
-});
+      coin = coin - 20;
+      document.getElementById("coin").innerText = coin;
+    }
+  });
+}
+
+callSectionFunctionality("call1", "service-name1", "service-number1");
+callSectionFunctionality("call2", "service-name2", "service-number2");
+callSectionFunctionality("call3", "service-name3", "service-number3");
+callSectionFunctionality("call4", "service-name4", "service-number4");
+callSectionFunctionality("call5", "service-name5", "service-number5");
+callSectionFunctionality("call6", "service-name6", "service-number6");
+callSectionFunctionality("call7", "service-name7", "service-number7");
+callSectionFunctionality("call8", "service-name8", "service-number8");
+callSectionFunctionality("call9", "service-name9", "service-number9");
