@@ -34,6 +34,20 @@ document.getElementById("call1").addEventListener("click", function () {
     const serviceNumber = getInnerText("service-number1");
     const message = `You are Calling ${serviceName} at ${serviceNumber}`;
     alert(message);
+    let date = new Date();
+    date = date.toLocaleString();
+    date = date.split(",")[1];
+
+    const cardBodyHtml = ` <div
+                class="flex justify-between items-center gap-2 bg-[#F2F2F2] p-4 rounded-lg mt-4">
+                <div>
+                  <h2 class="text-[13px] font-semibold mb-1">${serviceName}</h2>
+                  <p class="w-full text-[#5C5C5C] text-sm">${serviceNumber}</p>
+                </div>
+                <div class="text-[11px]">${date}</div>
+              </div>`;
+    document.getElementById("card-body").innerHTML += cardBodyHtml;
+
     coin = coin - 20;
     document.getElementById("coin").innerText = coin;
   }
