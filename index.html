@@ -18,43 +18,65 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
   </head>
-  <body class="relative">
-    <header class="fixed bg-white z-10 w-full">
-      <nav
-        class="flex flex-col md:flex-row justify-between md:items-center max-w-6xl mx-auto pt-4 mb-6">
-        <div
-          class="flex flex-col md:flex-row md:items-center gap-2 ms-4 md:ms-0">
-          <img class="w-12 md:w-16" src="./assets/logo.png" alt="" />
-          <p class="text-xl text-[#006747] font-bold">
-            Emergency <br />
-            Service
-          </p>
-        </div>
-        <div
-          class="flex flex-col sm:flex-row gap-4 md:gap-10 md:items-center mt-2 md:mt-0 ms-4 md:ms-0">
-          <div class="text-lg font-medium flex gap-2 items-center">
-            <span cla id="heart-count">0</span>
-            <i class="fa-regular fa-heart"></i>
+  <body class="">
+    <header class="sticky top-0 left-0 bg-white z-10 w-full mb-[25px]">
+      <div>
+        <nav
+          class="flex md:flex-row justify-between md:items-center max-w-6xl mx-auto pt-4 mb-6">
+          <div
+            class="flex flex-col md:flex-row md:items-center gap-2 ms-4 md:ms-0">
+            <img class="w-12 md:w-16" src="./assets/logo.png" alt="" />
+            <p class="text-lg md:text-xl text-[#006747] font-bold">
+              Emergency <br />
+              Service
+            </p>
           </div>
-          <div class="text-lg font-medium flex gap-2 items-center">
-            <span id="coin">100</span>
 
-            <span><img class="w-[90%]" src="./assets/coin.png" alt="" /></span>
+          <div class="relative">
+            <div
+              class="md:hidden absolute right-[28%] top-0 text-xl"
+              id="menu-icon">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+            <div
+              class="text-xl hidden absolute right-[3%] top-0"
+              id="cross-icon">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div
+              class="md:flex flex-col md:flex-row items-center md:gap-10 md:items-center mt-6 hidden"
+              id="mobile-menu">
+              <div class="text-lg font-medium flex gap-1 items-center">
+                <span class="" id="heart-count">0</span>
+                <i class="fa-solid fa-heart text-red-500"></i>
+              </div>
+              <div
+                class="text-lg font-medium flex gap-1 md:items-center relative mb-2">
+                <span id="coin">100</span>
+
+                <span
+                  ><img
+                    class="w-[70%] absolute top-[13%]"
+                    src="./assets/coin.png"
+                    alt=""
+                /></span>
+              </div>
+              <button
+                class="bg-[#00A63E] text-white font-medium text-lg px-4 py-2 rounded-3xl w-fit md:w-full">
+                2 Copy
+              </button>
+            </div>
           </div>
-          <button
-            class="bg-[#00A63E] text-white font-medium text-lg px-4 py-2 rounded-3xl cursor-pointer w-fit md:w-full">
-            2 Copy
-          </button>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
     <main class="mb-[80px]">
       <!-- banner section -->
       <section
-        class="bg-gradient-to-r from-[#006747] via-[#013223] to-[#013223] py-[20px] mb-28">
+        class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] py-[20px] mb-28">
         <div class="text-center">
           <img class="mx-auto w-24" src="./assets/logo-dark.png" alt="" />
-          <h1 class="text-[40px] font-bold my-3 text-white">
+          <h1 class="text-3xl md:text-[40px] font-bold my-3 text-white">
             Emergency Service Directory
           </h1>
           <p class="text-white font-semibold text-xl">
