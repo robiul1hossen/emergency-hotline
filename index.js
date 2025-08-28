@@ -64,3 +64,7 @@ callSectionFunctionality("call6", "service-name6", "service-number6");
 callSectionFunctionality("call7", "service-name7", "service-number7");
 callSectionFunctionality("call8", "service-name8", "service-number8");
 callSectionFunctionality("call9", "service-name9", "service-number9");
+
+document.getElementById("clear-btn").addEventListener("click", function () {
+  document.getElementById("card-body").innerHTML = "";
+});
