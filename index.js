@@ -57,7 +57,7 @@ function callSectionFunctionality(btnId, serviceId, numberId) {
       date = date.split(",")[1];
 
       const cardBodyHtml = ` <div
-                class="flex justify-between items-start gap-2  p-4 rounded-lg mt-4 shadow-lg">
+                class="flex justify-between items-start gap-2  p-4 rounded-lg mt-4 bg-white shadow-lg">
                 <div class="">
                   <h2 class="text-[12px] font-semibold mb-1">${serviceName}</h2>
                   <p class="w-full text-[#5C5C5C] text-sm">${serviceNumber}</p>
