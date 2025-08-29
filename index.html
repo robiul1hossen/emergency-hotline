@@ -19,7 +19,7 @@
       referrerpolicy="no-referrer" />
   </head>
   <body class="">
-    <header class="sticky top-0 left-0 bg-white z-10 w-full mb-[25px]">
+    <header class="fixed w-full top-0 left-0 bg-white z-10 mb-[25px]">
       <div>
         <nav
           class="flex md:flex-row justify-between md:items-center max-w-6xl mx-auto pt-4 mb-6">
@@ -41,30 +41,32 @@
               <i class="fa-solid fa-bars"></i>
             </div>
             <div
-              class="text-2xl hidden absolute right-[30%] top-0"
+              class="text-2xl hidden absolute right-[30%] top-0 mb-2"
               id="cross-icon">
               <i class="fa-solid fa-xmark"></i>
             </div>
             <div
               class="md:flex flex-col md:flex-row items-center md:gap-10 md:items-center mt-6 hidden"
               id="mobile-menu">
-              <div class="text-lg font-medium flex gap-1 items-center">
+              <div
+                class="text-lg font-medium flex gap-1 items-center px-2 my-2 rounded-md shadow-sm md:shadow-none">
                 <span class="" id="heart-count">0</span>
                 <i class="fa-solid fa-heart text-red-500"></i>
               </div>
               <div
-                class="text-lg font-medium flex gap-1 md:items-center relative mb-2">
+                class="text-lg font-medium flex gap-1 items-center md:items-center relative my-2 px-2 rounded-md shadow-sm md:shadow-none">
                 <span id="coin">100</span>
 
-                <span
-                  ><img
+                <span class="text-[#FFD700] font-extrabold">
+                  <!-- <img
                     class="w-[70%] absolute top-[13%]"
                     src="./assets/coin.png"
-                    alt=""
-                /></span>
+                    alt=""/> -->
+                  <i class="fa-solid fa-coins"></i>
+                </span>
               </div>
               <button
-                class="bg-[#00A63E] text-white font-medium text-lg px-4 py-2 rounded-3xl w-fit md:w-full">
+                class="bg-[#00A63E] text-white font-medium text-lg px-2 md:px-4 py-1 mt-2 rounded-3xl w-fit md:w-full shadow-sm md:shadow-none">
                 2 Copy
               </button>
             </div>
@@ -118,6 +120,7 @@
               </div>
               <div class="flex justify-center gap-2 mt-3 w-full">
                 <button
+                  id="copy-btn1"
                   class="w-full block cursor-pointer text-[#00A63E] bg-white hover:text-white hover:bg-[#00A63E] transition-all duration-200 rounded-lg border border-[#00A63E] hover:border-none">
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
@@ -152,6 +155,7 @@
               </div>
               <div class="flex justify-center gap-2 mt-3 w-full">
                 <button
+                  id="copy-btn2"
                   class="w-full block cursor-pointer text-[#00A63E] bg-white hover:text-white hover:bg-[#00A63E] transition-all duration-200 rounded-lg border border-[#00A63E] hover:border-none">
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
@@ -188,6 +192,7 @@
               </div>
               <div class="flex justify-center gap-2 mt-3 w-full">
                 <button
+                  id="copy-btn3"
                   class="w-full block cursor-pointer text-[#00A63E] bg-white hover:text-white hover:bg-[#00A63E] transition-all duration-200 rounded-lg border border-[#00A63E] hover:border-none">
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
@@ -226,6 +231,7 @@
               </div>
               <div class="flex justify-center gap-2 mt-3 w-full">
                 <button
+                  id="copy-btn4"
                   class="w-full block cursor-pointer text-[#00A63E] bg-white hover:text-white hover:bg-[#00A63E] transition-all duration-200 rounded-lg border border-[#00A63E] hover:border-none">
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
@@ -262,6 +268,7 @@
               </div>
               <div class="flex justify-center gap-2 mt-3 w-full">
                 <button
+                  id="copy-btn5"
                   class="w-full block cursor-pointer text-[#00A63E] bg-white hover:text-white hover:bg-[#00A63E] transition-all duration-200 rounded-lg border border-[#00A63E] hover:border-none">
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
@@ -298,6 +305,7 @@
               </div>
               <div class="flex justify-center gap-2 mt-3 w-full">
                 <button
+                  id="copy-btn6"
                   class="w-full block cursor-pointer text-[#00A63E] bg-white hover:text-white hover:bg-[#00A63E] transition-all duration-200 rounded-lg border border-[#00A63E] hover:border-none">
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
@@ -334,6 +342,7 @@
               </div>
               <div class="flex justify-center gap-2 mt-3 w-full">
                 <button
+                  id="copy-btn7"
                   class="w-full block cursor-pointer text-[#00A63E] bg-white hover:text-white hover:bg-[#00A63E] transition-all duration-200 rounded-lg border border-[#00A63E] hover:border-none">
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
@@ -368,6 +377,7 @@
               </div>
               <div class="flex justify-center gap-2 mt-3 w-full">
                 <button
+                  id="copy-btn8"
                   class="w-full block cursor-pointer text-[#00A63E] bg-white hover:text-white hover:bg-[#00A63E] transition-all duration-200 rounded-lg border border-[#00A63E] hover:border-none">
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
@@ -404,6 +414,7 @@
               </div>
               <div class="flex justify-center gap-2 mt-3 w-full">
                 <button
+                  id="copy-btn9"
                   class="w-full block cursor-pointer text-[#00A63E] bg-white hover:text-white hover:bg-[#00A63E] transition-all duration-200 rounded-lg border border-[#00A63E] hover:border-none">
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>

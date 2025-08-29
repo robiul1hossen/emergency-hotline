@@ -46,7 +46,6 @@ addEventListenerToIncreaseHeart("heart9");
 function callSectionFunctionality(btnId, serviceId, numberId) {
   document.getElementById(btnId).addEventListener("click", function () {
     let coin = Number(getInnerText("coin"));
-    console.log(coin);
     if (coin < 20) {
       return alert("not enough coin to make a call");
     } else {
@@ -59,12 +58,12 @@ function callSectionFunctionality(btnId, serviceId, numberId) {
       date = date.split(",")[1];
 
       const cardBodyHtml = ` <div
-                class="flex justify-between items-center gap-2 bg-[#F2F2F2] p-4 rounded-lg mt-4">
+                class="flex justify-between items-start gap-2  p-4 rounded-lg mt-4 shadow-lg">
                 <div class="">
-                  <h2 class="text-[13px] font-semibold mb-1">${serviceName}</h2>
+                  <h2 class="text-[12px] font-semibold mb-1">${serviceName}</h2>
                   <p class="w-full text-[#5C5C5C] text-sm">${serviceNumber}</p>
                 </div>
-                <div class="text-[11px] ">${date}</div>
+                <div class="text-[12px] ">${date}</div>
               </div>`;
       document.getElementById("card-body").innerHTML += cardBodyHtml;
 
@@ -87,3 +86,28 @@ callSectionFunctionality("call9", "service-name9", "service-number9");
 document.getElementById("clear-btn").addEventListener("click", function () {
   document.getElementById("card-body").innerHTML = "";
 });
+
+function copySectionFunctionality(btnId, numberId) {
+  document.getElementById(btnId).addEventListener("click", function () {
+    const number = getInnerText(numberId);
+    const input = document.createElement("input");
+    input.value = number;
+
+    console.log(document.body.appendChild(input));
+    input.select();
+    document.execCommand("copy");
+    document.body.removeChild(input);
+
+    alert(`copied ${number} to clipboard`);
+  });
+}
+
+copySectionFunctionality("copy-btn1", "service-number1");
+copySectionFunctionality("copy-btn2", "service-number2");
+copySectionFunctionality("copy-btn3", "service-number3");
+copySectionFunctionality("copy-btn4", "service-number4");
+copySectionFunctionality("copy-btn5", "service-number5");
+copySectionFunctionality("copy-btn6", "service-number6");
+copySectionFunctionality("copy-btn7", "service-number7");
+copySectionFunctionality("copy-btn8", "service-number8");
+copySectionFunctionality("copy-btn9", "service-number9");
