@@ -28,7 +28,6 @@ function addEventListenerToIncreaseHeart(id) {
     let heartCount = Number(getInnerText("heart-count"));
     heartCount++;
     document.getElementById("heart-count").innerText = heartCount;
-    console.log("clicked");
   });
 }
 
@@ -89,11 +88,15 @@ document.getElementById("clear-btn").addEventListener("click", function () {
 
 function copySectionFunctionality(btnId, numberId) {
   document.getElementById(btnId).addEventListener("click", function () {
+    let copyCount = Number(getInnerText("copy-count"));
+    // copyCount++;
+    document.getElementById("copy-count").innerText = copyCount + 1;
+
     const number = getInnerText(numberId);
     const input = document.createElement("input");
     input.value = number;
+    document.body.appendChild(input);
 
-    console.log(document.body.appendChild(input));
     input.select();
     document.execCommand("copy");
     document.body.removeChild(input);
